@@ -1,0 +1,131 @@
+2022-10-10 04:42:19.729 | INFO     | yolox.core.trainer:before_train:130 - args: Namespace(batch_size=8, cache=False, ckpt='yolox_s.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='oil_rig_config.py', experiment_name='oil_rig_config', fp16=True, logger='tensorboard', machine_rank=0, name=None, num_machines=1, occupy=True, opts=[], resume=False, start_epoch=None)
+2022-10-10 04:42:19.731 | INFO     | yolox.core.trainer:before_train:131 - exp value:
+╒═══════════════════╤═══════════════════════════╕
+│ keys              │ values                    │
+╞═══════════════════╪═══════════════════════════╡
+│ seed              │ None                      │
+├───────────────────┼───────────────────────────┤
+│ output_dir        │ './YOLOX_outputs'         │
+├───────────────────┼───────────────────────────┤
+│ print_interval    │ 10                        │
+├───────────────────┼───────────────────────────┤
+│ eval_interval     │ 10                        │
+├───────────────────┼───────────────────────────┤
+│ num_classes       │ 1                         │
+├───────────────────┼───────────────────────────┤
+│ depth             │ 0.33                      │
+├───────────────────┼───────────────────────────┤
+│ width             │ 0.5                       │
+├───────────────────┼───────────────────────────┤
+│ act               │ 'silu'                    │
+├───────────────────┼───────────────────────────┤
+│ data_num_workers  │ 4                         │
+├───────────────────┼───────────────────────────┤
+│ input_size        │ (640, 640)                │
+├───────────────────┼───────────────────────────┤
+│ multiscale_range  │ 5                         │
+├───────────────────┼───────────────────────────┤
+│ data_dir          │ './dataset/images'        │
+├───────────────────┼───────────────────────────┤
+│ train_ann         │ 'train.json'              │
+├───────────────────┼───────────────────────────┤
+│ val_ann           │ 'valid.json'              │
+├───────────────────┼───────────────────────────┤
+│ test_ann          │ 'instances_test2017.json' │
+├───────────────────┼───────────────────────────┤
+│ mosaic_prob       │ 1.0                       │
+├───────────────────┼───────────────────────────┤
+│ mixup_prob        │ 1.0                       │
+├───────────────────┼───────────────────────────┤
+│ hsv_prob          │ 1.0                       │
+├───────────────────┼───────────────────────────┤
+│ flip_prob         │ 0.5                       │
+├───────────────────┼───────────────────────────┤
+│ degrees           │ 10.0                      │
+├───────────────────┼───────────────────────────┤
+│ translate         │ 0.1                       │
+├───────────────────┼───────────────────────────┤
+│ mosaic_scale      │ (0.1, 2)                  │
+├───────────────────┼───────────────────────────┤
+│ enable_mixup      │ True                      │
+├───────────────────┼───────────────────────────┤
+│ mixup_scale       │ (0.5, 1.5)                │
+├───────────────────┼───────────────────────────┤
+│ shear             │ 2.0                       │
+├───────────────────┼───────────────────────────┤
+│ warmup_epochs     │ 5                         │
+├───────────────────┼───────────────────────────┤
+│ max_epoch         │ 10                        │
+├───────────────────┼───────────────────────────┤
+│ warmup_lr         │ 0                         │
+├───────────────────┼───────────────────────────┤
+│ min_lr_ratio      │ 0.05                      │
+├───────────────────┼───────────────────────────┤
+│ basic_lr_per_img  │ 0.00015625                │
+├───────────────────┼───────────────────────────┤
+│ scheduler         │ 'yoloxwarmcos'            │
+├───────────────────┼───────────────────────────┤
+│ no_aug_epochs     │ 15                        │
+├───────────────────┼───────────────────────────┤
+│ ema               │ True                      │
+├───────────────────┼───────────────────────────┤
+│ weight_decay      │ 0.0005                    │
+├───────────────────┼───────────────────────────┤
+│ momentum          │ 0.9                       │
+├───────────────────┼───────────────────────────┤
+│ save_history_ckpt │ True                      │
+├───────────────────┼───────────────────────────┤
+│ exp_name          │ 'oil_rig_config'          │
+├───────────────────┼───────────────────────────┤
+│ test_size         │ (640, 640)                │
+├───────────────────┼───────────────────────────┤
+│ test_conf         │ 0.01                      │
+├───────────────────┼───────────────────────────┤
+│ nmsthre           │ 0.65                      │
+╘═══════════════════╧═══════════════════════════╛
+2022-10-10 04:42:19.741 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (241003), thread 'MainThread' (140159297266560):
+Traceback (most recent call last):
+
+  File "YOLOX/tools/train.py", line 141, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='yolox_s.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='oil_rig_con...
+          └ ╒═══════════════════╤═══════════════════════════╕
+            │ keys              │ values                    │
+            ╞═══════════════════╪════...
+
+> File "/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/yolox/core/launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒═══════════════════╤═══════════════════════════╕
+    │            │ keys              │ values                    │
+    │            ╞═══════════════════╪═══...
+    └ <function main at 0x7f78d988eb90>
+
+  File "YOLOX/tools/train.py", line 118, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x7f78d988ecb0>
+    └ <yolox.core.trainer.Trainer object at 0x7f78ff3d4190>
+
+  File "/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/yolox/core/trainer.py", line 74, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x7f78d4b410e0>
+    └ <yolox.core.trainer.Trainer object at 0x7f78ff3d4190>
+  File "/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/yolox/core/trainer.py", line 134, in before_train
+    torch.cuda.set_device(self.local_rank)
+    │     │    │          │    └ 0
+    │     │    │          └ <yolox.core.trainer.Trainer object at 0x7f78ff3d4190>
+    │     │    └ <function set_device at 0x7f794bd8db00>
+    │     └ <module 'torch.cuda' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/cuda/__init__.py'>
+    └ <module 'torch' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/__init__.py'>
+  File "/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/cuda/__init__.py", line 314, in set_device
+    torch._C._cuda_setDevice(device)
+    │     │  │               └ 0
+    │     │  └ <built-in function _cuda_setDevice>
+    │     └ <module 'torch._C' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/_C.cpython-37m-x86_64-linux-gnu...
+    └ <module 'torch' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/__init__.py'>
+  File "/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/cuda/__init__.py", line 217, in _lazy_init
+    torch._C._cuda_init()
+    │     │  └ <built-in function _cuda_init>
+    │     └ <module 'torch._C' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/_C.cpython-37m-x86_64-linux-gnu...
+    └ <module 'torch' from '/home/jpwin/anaconda3/envs/pytorch/lib/python3.7/site-packages/torch/__init__.py'>
+
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
